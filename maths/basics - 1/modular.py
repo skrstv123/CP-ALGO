@@ -14,7 +14,7 @@ properties;
 #modular exponentiation
 # x^n
 #1 recursive
-def binaryExponentiation( x, n):
+def binaryRecExponentiation( x, n):
     if(n==0):
 		return 1
     elif(n%2 == 0):        #n is even
@@ -23,7 +23,7 @@ def binaryExponentiation( x, n):
         return x*binaryExponentiation(x*x,(n-1)/2)
 
 #2 iterative
-def binaryExponentiation(x,n):
+def binaryIterExponentiation(x,n):
     result=1
     while(n>0):
     
@@ -48,7 +48,7 @@ def modularExponentiation(x,n,M):
         return (x*modularExponentiation((x*x)%M,(n-1)/2,M))%M
 
 #4 modularExponentiation iterative
-def binaryExponentiation(x,n,M):
+def binaryModularExponentiation(x,n,M):
 	"""
 	Time complexity: O(log N)
 	Memory complexity: O(1)
@@ -59,7 +59,25 @@ def binaryExponentiation(x,n,M):
         if(n&1):
             result=(result * x)%M
         x=(x*x)%M
-        n>>=2
+        n>>=1
     return result  
 	
+#modular division
+from math import gcd 
+def modInverse(b,m):   
+    if (gcd(b,m)==1):   
+        return -1
+    else:    
+        return binaryModularExponentiation(b, m - 2, m) 
+def modDiv(a,b,m):
+	x= modInverse(b,m)
+	if x==-1:
+		return 'division not defined'
+	else :
+		return (x*a)%m
+		
+#	driver code
+#	(8/3)%5
+print(modDiv(8,3,5))
 
+  
