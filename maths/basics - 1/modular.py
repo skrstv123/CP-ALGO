@@ -65,7 +65,7 @@ def binaryModularExponentiation(x,n,M):
 #modular division
 from math import gcd 
 def modInverse(b,m):   
-    if (gcd(b,m)==1):   
+    if (gcd(b,m)!=1):   
         return -1
     else:    
         return binaryModularExponentiation(b, m - 2, m) 
