@@ -6,6 +6,9 @@ properties;
 	2> (a*b)%c = ((a%c)*(b%c))%c
 	3> (a-b)%c = ((a%c) - (b%c) + c)%c
 	4> (a/b)%c = ((a%c)*(b^-1%c))%c
+		=> modular division
+		Given three positive numbers a, b and m. Compute a/b under modulo m. 
+		The task is basically to find a number c such that (b * c) % m = a % m.
 	
 """
 #modular exponentiation

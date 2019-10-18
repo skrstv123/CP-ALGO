@@ -61,7 +61,7 @@ int mulmodinv(int A, int M)
 }
 
 /*3
-mulmodinv when p is a prime 
+mulmodinv when m is a prime 
 
 This approach uses Fermat's Little Theorem.
 
