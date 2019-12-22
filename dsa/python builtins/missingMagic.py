@@ -12,6 +12,7 @@ def pythagoras(a,b):
 	from math import sqrt
 	return sqrt(a**2 + b**2) 
 
+#2 by modified dictionary
 class pythagoras_dict(dict):
 	"""docstring for pythagoras_dict"""
 	def __missing__(self, arg):
