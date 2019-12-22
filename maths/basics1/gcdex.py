@@ -14,9 +14,9 @@ def gcdExtended(a, b, x=1, y=1):
     x = y1 - (b/a) * x1 
     y = x1 
 
-    print(x,y) 
+    #print(x,y) 
 
-    return gcd 
+    return gcd,x,y
 
 print(gcdExtended(3,12)) 
 #print(x,y)
