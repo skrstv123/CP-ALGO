@@ -46,7 +46,7 @@ class memoise(dict):
         return self[key.args, frozenset(key.kwargs.items())]
 
 
-@memoise
+@memoise 
 def fib(a):
     #try this function with and without the decorator :)
     if a<=1:
