@@ -1,3 +1,3 @@
 # MATHS ALGOS
 
-a better tutorial is available [here](https://www.geeksforgeeks.org/fundamentals-of-algorithms/)
+a good tutorial is available [here](https://www.geeksforgeeks.org/fundamentals-of-algorithms/)
