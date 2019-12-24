@@ -6,6 +6,8 @@ set operations
 # .add to add new elements
 # .difference to find difference b/w two sets
 # .pop() removes an item
+# .clear
+# .update
 
 """
 

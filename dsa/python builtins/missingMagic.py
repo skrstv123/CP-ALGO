@@ -84,4 +84,4 @@ class censor_dict(dict):
 # censored = censor_dict({'fack':'f**k','cool':'python :p'}) 
 # txt = "fack me i'm cool"
 # txt = ' '.join(censored[x] for x in txt.split())
-# print(txt)
+# print(txt) #f**k me i'm python :p

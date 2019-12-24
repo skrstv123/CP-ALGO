@@ -43,7 +43,7 @@ class inherited(baseA, baseB):
 # print(d.x) #d is of class inherited, attribute x is first looked up in inherited then baseA then in baseB hence 10 is returned
 # #we're looking up in baseA first then in baseB: so priority is given to the left argument and there should be no confusion as in c++ 
 
-#-----above functionality can be implemented using dictionaries-------
+#-----above functionality can be implemented using dictionaries using chainmap-------
 from collections import ChainMap
 basea = {'x':10}
 baseb = {'x':20,'y':30}
