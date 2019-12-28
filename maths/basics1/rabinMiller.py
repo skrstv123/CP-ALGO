@@ -21,9 +21,9 @@ def modex(a,b,m):
 #     return true 
 
 # else:
-#     keep squaring x while
-#                         d!=n-1
-#                         (x^2)%n != (1 or n-1) 
+#     keep squaring x while d!=n-1
+#           d//=2
+#          (x^2)%n == (1<return False> else if n-1<return True>) 
 from random import randint 
 def miller(d,n):
  
