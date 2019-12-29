@@ -36,6 +36,7 @@ def soe(n): #10^7
 			for j in range(i*i,n,i):
 				p[j]=0 
 	return p
+@lru_cache(maxsize = 256)
 def simple_prime(x):
     if x<2: return False
     if x==2: return True
@@ -43,6 +44,7 @@ def simple_prime(x):
     for i in range(3,mt.ceil(mt.sqrt(x)),2):
         if x%i==0: return False 
     return True
+@lru_cache(maxsize = 128)
 def modex(a,b,m): 
 	r= 1 
 	while b:
@@ -51,11 +53,13 @@ def modex(a,b,m):
 		b>>=1
 		a=(a*a)%m 
 	return r 
+@lru_cache(maxsize = 128)
 def modinv(a,m): return modex(a,m-2,m) if mt.gcd(a,m)==1 else -1
 
 
 intinp = lambda : int(input()) 
 def listinp(func= int): return list(map(func,input().split())) 
+def nsepline(n,func=str): return [func(input()) for _ in range(n)]
 
 #-------------------code------------------------
 
