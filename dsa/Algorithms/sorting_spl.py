@@ -13,3 +13,4 @@ if __name__ == "__main__":
     spl_odd = lambda x: x&1==1
     x.sel_sort(spl_odd)
     print(x)
+# 20KTJ4524660
