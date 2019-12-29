@@ -59,5 +59,5 @@ def checkprime(n, k =4 ):
     return True
         
 if __name__ == "__main__":
-    for i,j in enumerate(range(1,20)):
-        print(i,checkprime(j))
+    for i in range(20):
+        print(i,checkprime(i))
