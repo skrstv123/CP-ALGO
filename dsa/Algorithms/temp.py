@@ -60,6 +60,7 @@ def modinv(a,m): return modex(a,m-2,m) if mt.gcd(a,m)==1 else -1
 intinp = lambda : int(input()) 
 def listinp(func= int): return list(map(func,input().split())) 
 def nsepline(n,func=str): return [func(input()) for _ in range(n)]
+def printlist(l,func=str,sepp=' '): print(sepp.join(list(map(func,l))))
 
 #-------------------code------------------------
 
