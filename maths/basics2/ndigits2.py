@@ -4,7 +4,7 @@ find the next greater number with the same set of digits
 '''
 #iterate from right towards left; find first number which isnt in ascending order
 #if found none: number itself is the max
-#else : find smallest from its right side and swap them to get the answer
+#else : find smallest from its right side and swap them and sort that part to get the answer
 
 from bisect import bisect as bs
 
