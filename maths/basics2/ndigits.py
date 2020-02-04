@@ -11,5 +11,5 @@ def toBase(n,b):
         n//=b 
     return ''.join(l[::-1])
 
-N = int(input()) 
+N = int(input())
 print(toBase(N,6))
