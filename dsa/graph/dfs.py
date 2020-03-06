@@ -8,24 +8,25 @@ class graph(object):
 
 	def addedge(self,u,v): self.adjl[u].append(v) 
 
-def dfs(graph, source, vis):
+def dfs(graph, source, visited):
 	gr = graph.adjl
-	vis[source] = 1 
+	visited[source] = 1 
 	print(source)
 	for v in gr[source]:
-		if not vis[v]:
-			dfs(graph, v, vis)
+		if not visited[v]:
+			dfs(graph, v, visited)
 
 def dfs_(graph, source):
-	vis = [0]*len(graph.adjl)
-	dfs(graph, source, vis)
+	visited = [0]*len(graph.adjl)
+	dfs(graph, source, visited)
 
-g = graph()
-g.addedge(0,1)
-g.addedge(0,2)
-g.addedge(1,2)
-g.addedge(2,0)
-g.addedge(2,3)
-g.addedge(3,3)
+if __name__ == '__main__':
+	g = graph()
+	g.addedge(0,1)
+	g.addedge(0,2)
+	g.addedge(1,2)
+	g.addedge(2,0)
+	g.addedge(2,3)
+	g.addedge(3,3)
 
-dfs_(g,2)
+	dfs_(g,2)
