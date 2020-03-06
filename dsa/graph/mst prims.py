@@ -3,7 +3,7 @@ from sys import maxsize
 
 # representing using adjacency list 
 
-from collections import defaultdict, deque
+from collections import defaultdict
 class graph(object):
 	"""docstring for graph"""
 	def __init__(self,vc):
@@ -44,7 +44,6 @@ class graph(object):
 
 			# find min weight not yet included in the mst
 			a = self.min_weight(key, mst)
-			print(a)
 
 			# add it to mst
 			mst[a] = True
