@@ -18,10 +18,11 @@ To provide a Python solution, edit solution.py To provide a Java solution, edit 
 
 Test cases
 ==========
-
+```
 Inputs: (int) n = 0 Output: (string) "23571"
 
 Inputs: (int) n = 3 Output: (string) "71113"
+```
 
 Use verify [file] to test your solution and see how it does. When you are finished editing your code, use submit [file] to submit your answer. If your solution passes the test cases, it will be removed from your home folder.
 
@@ -66,6 +67,7 @@ To provide a Java solution, edit Solution.java
 
 Test cases
 ==========
+```
 Your code should pass the following test cases.
 Note that it may also be run against hidden test cases not shown here.
 
@@ -90,6 +92,7 @@ Input:
 Solution.solution({"1.1.2", "1.0", "1.3.3", "1.0.12", "1.0.2"})
 Output:
     1.0,1.0.2,1.0.12,1.1.2,1.3.3
+```
 
 Use verify [file] to test your solution and see how it does. When you are finished editing your code, use submit [file] to submit your answer. If your solution passes the test cases, it will be removed from your home folder.
 
@@ -153,6 +156,7 @@ To provide a Python solution, edit solution.py
 
 Test cases
 ==========
+```
 Your code should pass the following test cases.
 Note that it may also be run against hidden test cases not shown here.
 
@@ -177,6 +181,7 @@ Input:
 solution.solution([3, 1, 4, 1, 5, 9])
 Output:
     94311
+```
 
 Use verify [file] to test your solution and see how it does. When you are finished editing your code, use submit [file] to submit your answer. If your solution passes the test cases, it will be removed from your home folder.
 
@@ -357,6 +362,7 @@ To provide a Python solution, edit solution.py
 
 Test cases
 ==========
+```
 Your code should pass the following test cases.
 Note that it may also be run against hidden test cases not shown here.
 
@@ -381,6 +387,7 @@ Input:
 solution.solution([[0, 1, 0, 0, 0, 1], [4, 0, 0, 3, 2, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]])
 Output:
     [0, 3, 2, 9, 14]
+```
 
 Use verify [file] to test your solution and see how it does. When you are finished editing your code, use submit [file] to submit your answer. If your solution passes the test cases, it will be removed from your home folder.
 
@@ -514,7 +521,7 @@ Test cases
 ==========
 Your code should pass the following test cases.
 Note that it may also be run against hidden test cases not shown here.
-
+```
 -- Java cases --
 Input:
 Solution.solution('2', '1')
@@ -536,6 +543,7 @@ Input:
 solution.solution('2', '1')
 Output:
     1
+```
 
 ```python
 from math import gcd
