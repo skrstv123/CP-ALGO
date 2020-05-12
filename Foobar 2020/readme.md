@@ -236,6 +236,7 @@ Lambda has given you an overview of the types of bricks available, plus a budget
 Each type of staircase should consist of 2 or more steps.  No two steps are allowed to be at the same height - each step must be lower than the previous one. All steps must contain at least one brick. A step's height is classified as the total amount of bricks that make up that step.
 For example, when N = 3, you have only 1 choice of how to build the staircase, with the first step having a height of 2 and the second step having a height of 1: (# indicates a brick)
 
+```
 #
 ##
 21
@@ -259,6 +260,7 @@ But when N = 5, there are two ways you can build a staircase from the given bric
 ##
 ##
 32
+```
 
 Write a function called solution(n) that takes a positive integer n and returns the number of different staircases that can be built from exactly n bricks. n will always be at least 3 (so you can have a staircase at all), but no more than 200, because Commander Lambda's not made of money!
 
@@ -384,7 +386,7 @@ Output:
 Use verify [file] to test your solution and see how it does. When you are finished editing your code, use submit [file] to submit your answer. If your solution passes the test cases, it will be removed from your home folder.
 
 
-#https://www.youtube.com/watch?v=bTeKu7WdbT8
+[Tutorial](https://www.youtube.com/watch?v=bTeKu7WdbT8)
 
 ```python
 # -------------------DOOMSDAY FUEL-------------------------
