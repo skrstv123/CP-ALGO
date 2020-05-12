@@ -303,19 +303,18 @@ Use verify [file] to test your solution and see how it does. When you are finish
 
 ```python
 from collections import defaultdict as dp
+def KNAPSACK01(W):
+    tbl=dp(lambda:0)
+    tbl[0,0]= tbl[1,1] = tbl[2,2] = 1 
+    for j in range(1,W):
+        for i in range(W+1):
+            tbl[i,j]=tbl[i,j-1]
+            if i>=j:
+                tbl[i,j]+=tbl[i-j,j-1]
+    return tbl[W,W-1]
 def solution(n):
     # Your code here
-    
-    def mgold_KNAPSACK(W):
-        tbl=dp(lambda:0)
-        tbl[0,0]= tbl[1,1] = tbl[2,2] = 1 
-        for j in range(1,W):
-            for i in range(W+1):
-                tbl[i,j]=tbl[i,j-1]
-                if i>=j:
-                    tbl[i,j]+=tbl[i-j,j-1]
-        return tbl[W,W-1]
-    return mgold_KNAPSACK(n)
+    return KNAPSACK01(n)
 ```
 - - - 
 
