@@ -277,6 +277,7 @@ To provide a Python solution, edit solution.py
 
 Test cases
 ==========
+```
 Your code should pass the following test cases.
 Note that it may also be run against hidden test cases not shown here.
 
@@ -301,6 +302,7 @@ Input:
 solution.solution(3)
 Output:
     1
+```
 
 Use verify [file] to test your solution and see how it does. When you are finished editing your code, use submit [file] to submit your answer. If your solution passes the test cases, it will be removed from your home folder.
 
