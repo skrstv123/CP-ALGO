@@ -36,7 +36,7 @@ def solve():
         fails = []
         for size in ordered.keys():
             if len(ordered[size])>len(received[size]):
-                fails.extend(sorted(ordered[size][len(received[size]):]))
+                fails.extend((ordered[size][len(received[size]):]))
 
         if len(fails)==0: print('YES') 
         else: 
