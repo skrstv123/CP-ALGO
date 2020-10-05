@@ -1,3 +1,4 @@
+//This is a demo program to illustrate the various operations that can be done in a vector in cpp.
 #include <iostream>
 #include <vector> //contiguous memory allocation
 #include <algorithm> // to use sort function
