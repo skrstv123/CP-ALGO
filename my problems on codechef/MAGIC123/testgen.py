@@ -29,16 +29,17 @@ def make_solf(fn):
             n,k = map(int, input().split())
             p = list(map(int, input().split()))
             mp = max(p)
-            
+
             mark = [True for _ in range(mp+1)]
             
-            mark[0] = mark[1] = False
+            mark[0] = False
 
-            for f in range(2, n+1):
-                if mark[f]:
-                    mark[f]=False
-                    for x in range(f*f, mp+1, f):
-                        mark[x] = False
+            for f in range(2, k+1):
+                if f<=mp:
+                    if mark[f]:
+                        mark[f]=False
+                        for x in range(f*f, mp+1, f):
+                            mark[x] = False
             
             fin_p = [x for x in p if mark[x]]
 
@@ -46,9 +47,22 @@ def make_solf(fn):
                 fin_p = find_lis(fin_p)
             
             print("YES" if len(fin_p)>=k else "NO")
-        
-        
     
     sys.stdin = open('tf'+str(fn),'r')
     sys.stdout = open('sf'+str(fn),'w')
     solve()
+
+# maketf()
+
+#  _                      _   _  __       _
+# | |__   ___  __ _ _   _| |_(_)/ _|_   _| |
+# | '_ \ / _ \/ _` | | | | __| | |_| | | | |
+# | |_) |  __/ (_| | |_| | |_| |  _| |_| | |
+# |_.__/ \___|\__,_|\__,_|\__|_|_|  \__,_|_|
+
+#  _                _                                   _
+# | |__   __ _  ___| | ____ _ _ __ ___  _   _ _ __   __| |
+# | '_ \ / _` |/ __| |/ / _` | '__/ _ \| | | | '_ \ / _` |
+# | |_) | (_| | (__|   < (_| | | | (_) | |_| | | | | (_| |
+# |_.__/ \__,_|\___|_|\_\__, |_|  \___/ \__,_|_| |_|\__,_|
+#                       |___/

@@ -39,6 +39,7 @@ void pointUpdate(int arr[],int tree[],int size, int i, int new_val){
 }
 
 
+
 int main(){
 	int arrSize = 6;
 	int arr[arrSize] = {1,5,7,3,6,2};
