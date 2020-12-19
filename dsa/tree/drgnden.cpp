@@ -3,6 +3,7 @@
 ** tree flattening
 ** sparse table - repeat safe queries on static arrays
 ** fenwick tree
+40441964
 */
 #include <bits/stdc++.h>
 using ll = long long int; 

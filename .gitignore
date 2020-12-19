@@ -150,3 +150,5 @@ dmypy.json
 # c,cpp,java
 *.exe
 *.class
+
+__pychache__
