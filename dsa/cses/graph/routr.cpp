@@ -33,7 +33,7 @@ int main(){
         int a,b;
         cin>>a>>b;
         graph_adj[a].push_back(b);
-        graph_adj[b].push_back(a);
+        // graph_adj[b].push_back(a);
     }
     for(int i=1;i<=n;i++){
         if(!visited[i]){

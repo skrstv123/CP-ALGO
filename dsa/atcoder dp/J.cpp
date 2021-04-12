@@ -9,6 +9,7 @@ using namespace std;
 #define vit vector<ll>
 #define mid(l,r) (l+(r-l)/2)
 #define endl '\n'
+#define vr vector
 
 const int MAX_N = 1e5 + 1;
 const ll MOD = 1e9 + 7;

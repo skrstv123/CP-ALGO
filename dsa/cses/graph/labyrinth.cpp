@@ -7,6 +7,8 @@ vector<vector<pair<int,int>>> path;
 vector<vector<bool>> vis;
 int sx, sy, ex, ey;
 vector<pair<int,int>> moves = {{-1,0}, {1,0}, {0,-1}, {0,1}};
+map<pair<int, int>, char> mvl;
+
 
 void bfs()
 {
@@ -42,6 +44,10 @@ main()
 {
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
+	mvl[{-1,0}] = 'U';
+	mvl[{1,0}] = 'D';
+	mvl[{0,-1}] = 'L';
+	mvl[{0,1}] = 'R';
 
 	cin >> n >> m;
 
@@ -60,8 +66,7 @@ main()
 			char c; cin >> c;
 			if(c == '#') vis[i][j] = true;
 			if(c == 'A'){ sx = i; sy = j;}
-			if(c == 'B')
-			{ex = i; ey = j;}
+			if(c == 'B'){ ex = i; ey = j;}
 		}
 
 	bfs();
@@ -71,31 +76,23 @@ main()
 		cout << "NO" << endl;
 	}
     else{
-	cout << "YES" << endl;
+		cout << "YES" << endl;
 
-	vector<pair<int,int>> ans;
-	pair<int,int> end = {ex,ey};
-	
-	while(!(end.first==sx && end.second==sy))
-	{
-		ans.push_back(path[end.first][end.second]);
-		end.first -= ans.back().first;
-		end.second -= ans.back().second;	
-	}
+		vector<char> ans;
+		pair<int,int> end = {ex,ey};
+		
+		while(!(end.first==sx && end.second==sy))
+		{
+			pair<int, int> lm = path[end.first][end.second];
+			ans.push_back(mvl[lm]);
+			end.first -= lm.first;
+			end.second -= lm.second;	
+		}
 
-	reverse(ans.begin(), ans.end());
-	cout << ans.size() << endl;
-	for(auto c: ans)
-	{
-		if(c.first == 1 and c.second ==0)
-			cout << 'D';
-		else if(c.first == -1 and c.second ==0)
-			cout << 'U';
-		else if(c.first == 0 and c.second == 1)
-			cout << 'R';
-		else if(c.first == 0 and c.second == -1)
-			cout << 'L';
-	}
+		reverse(ans.begin(), ans.end());
+		cout << ans.size() << endl;
+		for(auto c:ans)
+			cout<<c;
     }
     return 0;
 }
