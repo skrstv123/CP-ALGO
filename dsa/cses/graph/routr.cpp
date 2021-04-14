@@ -18,6 +18,7 @@ bool dfs_cycle(int u, int p)
 		{
 			start = v; 
 			end1 = u; 
+            // cout<<u<<' '<<v<<endl;
 			return true;
 		}
 		if(!visited[v]) if(dfs_cycle(v,u)) return true;
