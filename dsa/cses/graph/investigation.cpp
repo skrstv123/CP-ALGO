@@ -1,21 +1,22 @@
 // Created by skrstv123
 #include <bits/stdc++.h>
 using namespace std;
-#define ar array
-#define ll long long
-#define range(i, start, end ,step) for(ll i=start ;i<end; i += step)
-#define rep(i,s,e) for(ll i=s;i<=e;++i)
-#define reparr(arr) for(auto x: arr) cout<<x<<" ";
-#define repr(i,e,s) for(ll i=e; i>=s; i--)
-#define vit vector<ll>
-#define mid(l,r) (l+(r-l)/2)
-#define endl '\n'
-#define vr vector
-#define pr pair
-#define pll pair<ll, ll> 
-#define pb push_back
-#define fp first
-#define sp second
+#define ar                              array
+#define ll                              long long
+#define range(i, start, end ,step)      for(ll i=start ;i<end; i += step)
+#define rep(i,s,e)                      for(ll i=s;i<=e;++i)
+#define reparr(arr)                     for(auto x: arr) cout<<x<<" ";
+#define repr(i,e,s)                     for(ll i=e; i>=s; i--)
+#define vit                             vector<ll>
+#define mid(l,r)                        (l+(r-l)/2)
+#define endl                            '\n'
+#define vr                              vector
+#define pr                              pair
+#define pll                             pair<ll, ll> 
+#define pb                              push_back
+#define fp                              first
+#define sp                              second
+#define djpq                            priority_queue< pll , vr<pll>, greater<pll> >
 
 const int MAX_N = 1e5 + 1;
 const ll MOD = 1e9 + 7;
@@ -39,7 +40,7 @@ void solve() {
 	min_nodes[1]=0;
 	max_nodes[1]=0;
 
-	priority_queue< pll, vr<pll> , greater<pll> > pq;
+	djpq pq;
 	pq.push({0,1});
 	while(!pq.empty()){
 		ll d = pq.top().fp;
