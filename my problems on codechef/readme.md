@@ -24,11 +24,9 @@ for each test-case, print "YES" if ghost can be killed ,else "NO"
 - $1 \leq P_i \leq 10^5$
 
 ## example input
-```
 1
 5 4 3
 1 9 5 7 2
-```
 
 ## example output
 YES
