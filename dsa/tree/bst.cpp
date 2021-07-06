@@ -34,6 +34,7 @@ class Node{
 		}
 };
 
+
 Node *insertBST(Node *root, int x){
 	if(!root){
 		return new Node(x);
@@ -124,6 +125,66 @@ bool isIdentical(Node *A, Node *B){
 		return (c1 && c2) && c3;
 	}
 }
+
+////////////////////////////////////////////////////////////////////////////
+class data{
+	public:
+		bool isbst;
+		int size;int min; int max; 
+		data(){
+			isbst= true;
+			size = 0;
+			min= MAX_N;
+			max=-MAX_N; 
+		}
+};
+
+data largestBST(Node* root){
+
+	if(!root) return data();
+
+	data leftB = largestBST(root->left);
+	data rightB = largestBST(root->right);
+
+	data curr= data();
+
+	if(!leftB.isbst || !rightB.isbst ||  
+		(leftB.max > root->data || rightB.min <= root->data ) ){
+		curr.isbst = false;
+		curr.size = max(leftB.size, rightB.size);
+		return (curr);
+	} 
+
+	curr.isbst = true;
+	curr.size = leftB.size + rightB.size + 1;
+	curr.min = root->left!=NULL? leftB.min : root->data;
+	curr.max = root->right!=NULL? rightB.max : root->data;
+
+	return curr;
+}
+////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////
+
+Node *prev = NULL, *last=NULL, *first=NULL;
+void recoverBST(Node *root){
+	if(!root) return;
+	recoverBST(root->left);
+	if(prev!=NULL){
+		if(prev->data > root->data){
+			if(first==NULL){
+				first = prev;
+			}
+			last = root;
+		}
+	}
+	prev = root;
+	recoverBST(root->right);
+}
+
+// swap last data and first data to recover the bst
+
+////////////////////////////////////////////////////////////////////////////
 
 void solve() {
 	
